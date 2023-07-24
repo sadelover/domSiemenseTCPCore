@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="aes">
+      <UniqueIdentifier>{85606b9c-4de8-4bbf-b908-96b69520d0c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="db">
+      <UniqueIdentifier>{4ce92dc4-02bc-4bd6-a55c-abc09f06586a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dtu">
+      <UniqueIdentifier>{08c0d071-4ba7-4b40-9f8c-7505eaf0b17d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="point">
+      <UniqueIdentifier>{69196f36-f34c-4e0c-8211-5f6dba8c15f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tool">
+      <UniqueIdentifier>{dd263023-6a72-4b5c-8395-69e0bf35a8f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zip">
+      <UniqueIdentifier>{b29a83f2-a6f9-4aeb-a48a-44f81ae56563}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BEOPDTUEngine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\aes\AES256.h">
+      <Filter>aes</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\config-netware.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\config-os2.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\config-win.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\errmsg.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\m_ctype.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\m_string.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\my_alloc.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\my_dbug.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\my_getopt.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\my_global.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\my_list.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\my_pthread.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\my_sys.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\mysql.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\mysql_com.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\mysql_embed.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\mysql_time.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\mysql_version.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\mysqld_ername.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\mysqld_error.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\raid.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\mySqlInclude\typelib.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\BEOPDataBaseInfo.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\DatabaseSession.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\DataHandler.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\DBInterfaceExp.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\DBInterfaceImp.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\ExportDataAccess.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\db\MysqlDeleter.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\dtu\BEOPDTUCtrl.h">
+      <Filter>dtu</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\dtu\DTUDataSender.h">
+      <Filter>dtu</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\dtu\PackageTypeDefine.h">
+      <Filter>dtu</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\dtu\RabbitMQSender.h">
+      <Filter>dtu</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\dtu\TCPDataSender.h">
+      <Filter>dtu</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\zip\unzip.h">
+      <Filter>zip</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\zip\zconf.h">
+      <Filter>zip</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\zip\zip.h">
+      <Filter>zip</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\zip\zlib.h">
+      <Filter>zip</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\CommonDefine.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\CustomTools.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\ProcessView.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\UtilString.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\point\sqlite\ParseStringParam3.h">
+      <Filter>point</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\point\sqlite\sqlite3.h">
+      <Filter>point</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\point\sqlite\sqlite3ext.h">
+      <Filter>point</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\point\sqlite\SqliteAcess.h">
+      <Filter>point</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\point\DataPointEntry.h">
+      <Filter>point</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\point\DataPointManager.h">
+      <Filter>point</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\DllDefine.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+    <ClInclude Include="BEOPDTUEngineWrapper.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DumpFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\LogicBase.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\ExcelOperator.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\CSVParser.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\DogTcpCtrl.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\ComInterface.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\TcpClient.h">
+      <Filter>tool</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BEOPDTUEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\aes\AES256.cpp">
+      <Filter>aes</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\db\DatabaseSession.cpp">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\db\DataHandler.cpp">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\dtu\BEOPDTUCtrl.cpp">
+      <Filter>dtu</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\dtu\DTUDataSender.cpp">
+      <Filter>dtu</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\dtu\PackageTypeDefine.cpp">
+      <Filter>dtu</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\dtu\RabbitMQSender.cpp">
+      <Filter>dtu</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\dtu\TCPDataSender.cpp">
+      <Filter>dtu</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\zip\unzip.cpp">
+      <Filter>zip</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\zip\zip.cpp">
+      <Filter>zip</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\ProcessView.cpp">
+      <Filter>tool</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\UtilString.cpp">
+      <Filter>tool</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\point\sqlite\ParseStringParam3.cpp">
+      <Filter>point</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\point\sqlite\SqliteAcess.cpp">
+      <Filter>point</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\point\DataPointEntry.cpp">
+      <Filter>point</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\point\DataPointManager.cpp">
+      <Filter>point</Filter>
+    </ClCompile>
+    <ClCompile Include="BEOPDTUEngineWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BEOPDTUManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\ExcelOperator.cpp">
+      <Filter>tool</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\CSVParser.cpp">
+      <Filter>tool</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\DogTcpCtrl.cpp">
+      <Filter>tool</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\ComInterface.cpp">
+      <Filter>tool</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\TcpClient.cpp">
+      <Filter>tool</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BEOPDTUEngine.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

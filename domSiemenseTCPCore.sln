@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC943}") = "domSiemenseTCPCore", "BEOPGatewayCore\BEOPGatewayCore.vcxproj", "{BEC7BF91-C67B-4E1A-A565-67904D5B9897}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		MinSizeRel|Win32 = MinSizeRel|Win32
+		Release|Win32 = Release|Win32
+		RelWithDebInfo|Win32 = RelWithDebInfo|Win32
+		Template|Win32 = Template|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEC7BF91-C67B-4E1A-A565-67904D5B9897}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BEC7BF91-C67B-4E1A-A565-67904D5B9897}.Debug|Win32.Build.0 = Debug|Win32
+		{BEC7BF91-C67B-4E1A-A565-67904D5B9897}.MinSizeRel|Win32.ActiveCfg = Release|Win32
+		{BEC7BF91-C67B-4E1A-A565-67904D5B9897}.MinSizeRel|Win32.Build.0 = Release|Win32
+		{BEC7BF91-C67B-4E1A-A565-67904D5B9897}.Release|Win32.ActiveCfg = Release|Win32
+		{BEC7BF91-C67B-4E1A-A565-67904D5B9897}.Release|Win32.Build.0 = Release|Win32
+		{BEC7BF91-C67B-4E1A-A565-67904D5B9897}.RelWithDebInfo|Win32.ActiveCfg = Release|Win32
+		{BEC7BF91-C67B-4E1A-A565-67904D5B9897}.RelWithDebInfo|Win32.Build.0 = Release|Win32
+		{BEC7BF91-C67B-4E1A-A565-67904D5B9897}.Template|Win32.ActiveCfg = Release|Win32
+		{BEC7BF91-C67B-4E1A-A565-67904D5B9897}.Template|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

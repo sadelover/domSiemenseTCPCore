@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="..\..\librabbitmq\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D8A43551-6564-3001-8609-CD05C8D0D567}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{15F9C24F-1206-321A-B8E4-77923038A9DF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="amqp.h" />
+    <ClInclude Include="amqp_framing.h" />
+    <ClInclude Include="amqp_hostcheck.h" />
+    <ClInclude Include="amqp_openssl_bio.h" />
+    <ClInclude Include="amqp_openssl_hostname_validation.h" />
+    <ClInclude Include="amqp_private.h" />
+    <ClInclude Include="amqp_socket.h" />
+    <ClInclude Include="amqp_ssl_socket.h" />
+    <ClInclude Include="amqp_table.h" />
+    <ClInclude Include="amqp_tcp_socket.h" />
+    <ClInclude Include="amqp_time.h" />
+    <ClInclude Include="utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="amqp_api.c" />
+    <ClCompile Include="amqp_connection.c" />
+    <ClCompile Include="amqp_consumer.c" />
+    <ClCompile Include="amqp_framing.c" />
+    <ClCompile Include="amqp_hostcheck.c" />
+    <ClCompile Include="amqp_mem.c" />
+    <ClCompile Include="amqp_openssl.c" />
+    <ClCompile Include="amqp_openssl_bio.c" />
+    <ClCompile Include="amqp_openssl_hostname_validation.c" />
+    <ClCompile Include="amqp_socket.c" />
+    <ClCompile Include="amqp_table.c" />
+    <ClCompile Include="amqp_tcp_socket.c" />
+    <ClCompile Include="amqp_time.c" />
+    <ClCompile Include="amqp_url.c" />
+    <ClCompile Include="utils.c" />
+  </ItemGroup>
+</Project>

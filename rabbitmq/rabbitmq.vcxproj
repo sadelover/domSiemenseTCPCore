@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{A0B54FCF-D5F4-3B47-BE47-B3543BF7F3EB}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>rabbitmq</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\bin\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\bin\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName)</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\make2010\librabbitmq\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">rabbitmq.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">rabbitmq.4</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\make2010\librabbitmq\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">rabbitmq.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">rabbitmq.4</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)rabbitmq;$(SolutionDir)rabbitmq\win32;C:\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;HAVE_CONFIG_H;WITH_SSL=1;ENABLE_THREAD_SAFETY;AMQP_BUILD;CMAKE_INTDIR="Debug";rabbitmq_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;HAVE_CONFIG_H;WITH_SSL=1;ENABLE_THREAD_SAFETY;AMQP_BUILD;CMAKE_INTDIR=\"Debug\";rabbitmq_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\make2010\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq\win32;C:\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\make2010\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq\win32;C:\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:X86</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\openssl\lib\libsslMDd.lib;C:\openssl\lib\libcryptoMDd.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/make2010/librabbitmq/Debug/rabbitmq.4.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/make2010/librabbitmq/Debug/rabbitmq.4.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)rabbitmq;$(SolutionDir)rabbitmq\win32;C:\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;WITH_SSL=1;ENABLE_THREAD_SAFETY;AMQP_BUILD;CMAKE_INTDIR="Release";rabbitmq_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;WITH_SSL=1;ENABLE_THREAD_SAFETY;AMQP_BUILD;CMAKE_INTDIR=\"Release\";rabbitmq_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\make2010\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq\win32;C:\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\make2010\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq\win32;C:\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:X86</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\openssl\lib\libsslMD.lib;C:\openssl\lib\libcryptoMD.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/make2010/librabbitmq/Release/rabbitmq.4.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/make2010/librabbitmq/Release/rabbitmq.4.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\make2010\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq\win32;C:\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;WITH_SSL=1;ENABLE_THREAD_SAFETY;AMQP_BUILD;CMAKE_INTDIR="MinSizeRel";rabbitmq_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;WITH_SSL=1;ENABLE_THREAD_SAFETY;AMQP_BUILD;CMAKE_INTDIR=\"MinSizeRel\";rabbitmq_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\make2010\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq\win32;C:\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\make2010\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq\win32;C:\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:X86</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\openssl\lib\libsslMD.lib;C:\openssl\lib\libcryptoMD.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/make2010/librabbitmq/MinSizeRel/rabbitmq.4.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/make2010/librabbitmq/MinSizeRel/rabbitmq.4.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\make2010\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq\win32;C:\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;WITH_SSL=1;ENABLE_THREAD_SAFETY;AMQP_BUILD;CMAKE_INTDIR="RelWithDebInfo";rabbitmq_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;WITH_SSL=1;ENABLE_THREAD_SAFETY;AMQP_BUILD;CMAKE_INTDIR=\"RelWithDebInfo\";rabbitmq_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\make2010\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq\win32;C:\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\make2010\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq\win32;C:\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:X86</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\openssl\lib\libsslMD.lib;C:\openssl\lib\libcryptoMD.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/make2010/librabbitmq/RelWithDebInfo/rabbitmq.4.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/make2010/librabbitmq/RelWithDebInfo/rabbitmq.4.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\librabbitmq\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/librabbitmq/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HE:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master -BE:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/make2010 --check-stamp-file E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/make2010/librabbitmq/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/librabbitmq/CMakeLists.txt;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq\CMakeLists.txt;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\make2010\librabbitmq\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/librabbitmq/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HE:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master -BE:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/make2010 --check-stamp-file E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/make2010/librabbitmq/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/librabbitmq/CMakeLists.txt;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq\CMakeLists.txt;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\make2010\librabbitmq\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/librabbitmq/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HE:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master -BE:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/make2010 --check-stamp-file E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/make2010/librabbitmq/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/librabbitmq/CMakeLists.txt;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq\CMakeLists.txt;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\make2010\librabbitmq\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/librabbitmq/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HE:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master -BE:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/make2010 --check-stamp-file E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/make2010/librabbitmq/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/Code2016/VSProject2017/Rabbitmq/rabbitmq-c-master/rabbitmq-c-master/librabbitmq/CMakeLists.txt;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq\CMakeLists.txt;E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\librabbitmq\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\make2010\librabbitmq\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\Code2016\VSProject2017\Rabbitmq\rabbitmq-c-master\rabbitmq-c-master\make2010\ZERO_CHECK.vcxproj">
+      <Project>{5F75F58F-5844-376E-B1CE-62BDD52D6D20}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="amqp.h" />
+    <ClInclude Include="amqp_framing.h" />
+    <ClInclude Include="amqp_hostcheck.h" />
+    <ClInclude Include="amqp_openssl_bio.h" />
+    <ClInclude Include="amqp_openssl_hostname_validation.h" />
+    <ClInclude Include="amqp_private.h" />
+    <ClInclude Include="amqp_socket.h" />
+    <ClInclude Include="amqp_ssl_socket.h" />
+    <ClInclude Include="amqp_table.h" />
+    <ClInclude Include="amqp_tcp_socket.h" />
+    <ClInclude Include="amqp_time.h" />
+    <ClInclude Include="utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="amqp_api.c" />
+    <ClCompile Include="amqp_connection.c" />
+    <ClCompile Include="amqp_consumer.c" />
+    <ClCompile Include="amqp_framing.c" />
+    <ClCompile Include="amqp_hostcheck.c" />
+    <ClCompile Include="amqp_mem.c" />
+    <ClCompile Include="amqp_openssl.c" />
+    <ClCompile Include="amqp_openssl_bio.c" />
+    <ClCompile Include="amqp_openssl_hostname_validation.c" />
+    <ClCompile Include="amqp_socket.c" />
+    <ClCompile Include="amqp_table.c" />
+    <ClCompile Include="amqp_tcp_socket.c" />
+    <ClCompile Include="amqp_time.c" />
+    <ClCompile Include="amqp_url.c" />
+    <ClCompile Include="utils.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

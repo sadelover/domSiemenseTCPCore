@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="OPC">
+      <UniqueIdentifier>{80929060-1427-4f2f-a839-7df7735842e0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\BEOPOPCClient.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\BEOPOPCClient.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icon1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\offline.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\online.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BEOPOPCClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BEOPOPCClientDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BEOPOPCLink.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OPCCtrl\BEOPOPCCtrl.h">
+      <Filter>OPC</Filter>
+    </ClInclude>
+    <ClInclude Include="OPCCtrl\OPC_Connection.h">
+      <Filter>OPC</Filter>
+    </ClInclude>
+    <ClInclude Include="OPCCtrl\OPCdefine.h">
+      <Filter>OPC</Filter>
+    </ClInclude>
+    <ClInclude Include="OPCCtrl\bottcode\advisesink.h">
+      <Filter>OPC</Filter>
+    </ClInclude>
+    <ClInclude Include="OPCCtrl\bottcode\datasink20.h">
+      <Filter>OPC</Filter>
+    </ClInclude>
+    <ClInclude Include="OPCCtrl\bottcode\globals.h">
+      <Filter>OPC</Filter>
+    </ClInclude>
+    <ClInclude Include="OPCCtrl\bottcode\group.h">
+      <Filter>OPC</Filter>
+    </ClInclude>
+    <ClInclude Include="OPCCtrl\bottcode\item.h">
+      <Filter>OPC</Filter>
+    </ClInclude>
+    <ClInclude Include="OPCCtrl\bottcode\opccomn.h">
+      <Filter>OPC</Filter>
+    </ClInclude>
+    <ClInclude Include="OPCCtrl\bottcode\opcda.h">
+      <Filter>OPC</Filter>
+    </ClInclude>
+    <ClInclude Include="OPCCtrl\bottcode\opcerrors.h">
+      <Filter>OPC</Filter>
+    </ClInclude>
+    <ClInclude Include="OPCCtrl\bottcode\opcprops.h">
+      <Filter>OPC</Filter>
+    </ClInclude>
+    <ClInclude Include="OPCCtrl\bottcode\opcquality.h">
+      <Filter>OPC</Filter>
+    </ClInclude>
+    <ClInclude Include="OPCCtrl\bottcode\safearray.h">
+      <Filter>OPC</Filter>
+    </ClInclude>
+    <ClInclude Include="OPCCtrl\bottcode\safelock.h">
+      <Filter>OPC</Filter>
+    </ClInclude>
+    <ClInclude Include="OPCCtrl\bottcode\server.h">
+      <Filter>OPC</Filter>
+    </ClInclude>
+    <ClInclude Include="OPCCtrl\bottcode\shutdownsink.h">
+      <Filter>OPC</Filter>
+    </ClInclude>
+    <ClInclude Include="DataPointEntry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSVParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="db\DataHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="db\BEOPDataBaseInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="db\DatabaseSession.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="db\DBInterfaceExp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="db\DBInterfaceImp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="db\ExportDataAccess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="db\MysqlDeleter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPClinetSample\db\BEOPDataBaseInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPClinetSample\db\DatabaseSession.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPClinetSample\db\DataHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPClinetSample\db\DBInterfaceExp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPClinetSample\db\DBInterfaceImp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPClinetSample\db\ExportDataAccess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPClinetSample\db\MysqlDeleter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RestartAutoRun.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DumpFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BEOPOPCClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BEOPOPCClientDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BEOPOPCLink.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OPCCtrl\BEOPOPCCtrl.cpp">
+      <Filter>OPC</Filter>
+    </ClCompile>
+    <ClCompile Include="OPCCtrl\OPC_Connection.cpp">
+      <Filter>OPC</Filter>
+    </ClCompile>
+    <ClCompile Include="OPCCtrl\bottcode\advisesink.cpp">
+      <Filter>OPC</Filter>
+    </ClCompile>
+    <ClCompile Include="OPCCtrl\bottcode\datasink20.cpp">
+      <Filter>OPC</Filter>
+    </ClCompile>
+    <ClCompile Include="OPCCtrl\bottcode\globals.cpp">
+      <Filter>OPC</Filter>
+    </ClCompile>
+    <ClCompile Include="OPCCtrl\bottcode\group.cpp">
+      <Filter>OPC</Filter>
+    </ClCompile>
+    <ClCompile Include="OPCCtrl\bottcode\item.cpp">
+      <Filter>OPC</Filter>
+    </ClCompile>
+    <ClCompile Include="OPCCtrl\bottcode\opccomn_i.c">
+      <Filter>OPC</Filter>
+    </ClCompile>
+    <ClCompile Include="OPCCtrl\bottcode\opcda_i.c">
+      <Filter>OPC</Filter>
+    </ClCompile>
+    <ClCompile Include="OPCCtrl\bottcode\safearray.cpp">
+      <Filter>OPC</Filter>
+    </ClCompile>
+    <ClCompile Include="OPCCtrl\bottcode\server.cpp">
+      <Filter>OPC</Filter>
+    </ClCompile>
+    <ClCompile Include="OPCCtrl\bottcode\shutdownsink.cpp">
+      <Filter>OPC</Filter>
+    </ClCompile>
+    <ClCompile Include="DataPointEntry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSVParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\DataHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\DatabaseSession.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPClinetSample\db\DatabaseSession.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPClinetSample\db\DataHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RestartAutoRun.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BEOPOPCClient.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

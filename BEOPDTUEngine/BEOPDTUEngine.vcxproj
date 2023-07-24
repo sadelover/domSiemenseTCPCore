@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AD2DA24D-DCAC-4360-9ADE-4A2FD185CD73}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BEOPDTUEngine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <UseOfAtl>Static</UseOfAtl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <UseOfAtl>Static</UseOfAtl>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\obj\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\obj\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)$(ProjectName);$(SolutionDir)rabbitmq;$(SolutionDir)rabbitmq\win32</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)\bin\$(Configuration);$(SolutionDir)lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libmysql.lib;rabbitmq.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)$(ProjectName);$(SolutionDir)rabbitmq;$(SolutionDir)rabbitmq\win32</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)\bin\$(Configuration);$(SolutionDir)lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libmysql.lib;rabbitmq.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BEOPDTUEngine.h" />
+    <ClInclude Include="BEOPDTUEngineWrapper.h" />
+    <ClInclude Include="DumpFile.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Tools\aes\AES256.h" />
+    <ClInclude Include="Tools\ComInterface.h" />
+    <ClInclude Include="Tools\CommonDefine.h" />
+    <ClInclude Include="Tools\CSVParser.h" />
+    <ClInclude Include="Tools\CustomTools.h" />
+    <ClInclude Include="Tools\db\BEOPDataBaseInfo.h" />
+    <ClInclude Include="Tools\db\DatabaseSession.h" />
+    <ClInclude Include="Tools\db\DataHandler.h" />
+    <ClInclude Include="Tools\db\DBInterfaceExp.h" />
+    <ClInclude Include="Tools\db\DBInterfaceImp.h" />
+    <ClInclude Include="Tools\db\ExportDataAccess.h" />
+    <ClInclude Include="Tools\db\MysqlDeleter.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\config-netware.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\config-os2.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\config-win.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\errmsg.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\mysql.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\mysqld_ername.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\mysqld_error.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\mysql_com.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\mysql_embed.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\mysql_time.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\mysql_version.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\my_alloc.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\my_dbug.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\my_getopt.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\my_global.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\my_list.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\my_pthread.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\my_sys.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\m_ctype.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\m_string.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\raid.h" />
+    <ClInclude Include="Tools\db\mySqlInclude\typelib.h" />
+    <ClInclude Include="Tools\DllDefine.h" />
+    <ClInclude Include="Tools\DogTcpCtrl.h" />
+    <ClInclude Include="Tools\dtu\BEOPDTUCtrl.h" />
+    <ClInclude Include="Tools\dtu\DTUDataSender.h" />
+    <ClInclude Include="Tools\dtu\PackageTypeDefine.h" />
+    <ClInclude Include="Tools\dtu\RabbitMQSender.h" />
+    <ClInclude Include="Tools\dtu\TCPDataSender.h" />
+    <ClInclude Include="Tools\ExcelOperator.h" />
+    <ClInclude Include="Tools\LogicBase.h" />
+    <ClInclude Include="Tools\point\DataPointEntry.h" />
+    <ClInclude Include="Tools\point\DataPointManager.h" />
+    <ClInclude Include="Tools\point\sqlite\ParseStringParam3.h" />
+    <ClInclude Include="Tools\point\sqlite\sqlite3.h" />
+    <ClInclude Include="Tools\point\sqlite\sqlite3ext.h" />
+    <ClInclude Include="Tools\point\sqlite\SqliteAcess.h" />
+    <ClInclude Include="Tools\ProcessView.h" />
+    <ClInclude Include="Tools\TcpClient.h" />
+    <ClInclude Include="Tools\UtilString.h" />
+    <ClInclude Include="Tools\zip\unzip.h" />
+    <ClInclude Include="Tools\zip\zconf.h" />
+    <ClInclude Include="Tools\zip\zip.h" />
+    <ClInclude Include="Tools\zip\zlib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BEOPDTUEngine.cpp" />
+    <ClCompile Include="BEOPDTUEngineWrapper.cpp" />
+    <ClCompile Include="BEOPDTUManager.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Tools\aes\AES256.cpp" />
+    <ClCompile Include="Tools\ComInterface.cpp" />
+    <ClCompile Include="Tools\CSVParser.cpp" />
+    <ClCompile Include="Tools\db\DatabaseSession.cpp" />
+    <ClCompile Include="Tools\db\DataHandler.cpp" />
+    <ClCompile Include="Tools\DogTcpCtrl.cpp" />
+    <ClCompile Include="Tools\dtu\BEOPDTUCtrl.cpp" />
+    <ClCompile Include="Tools\dtu\DTUDataSender.cpp" />
+    <ClCompile Include="Tools\dtu\PackageTypeDefine.cpp" />
+    <ClCompile Include="Tools\dtu\RabbitMQSender.cpp" />
+    <ClCompile Include="Tools\dtu\TCPDataSender.cpp" />
+    <ClCompile Include="Tools\ExcelOperator.cpp" />
+    <ClCompile Include="Tools\point\DataPointEntry.cpp" />
+    <ClCompile Include="Tools\point\DataPointManager.cpp" />
+    <ClCompile Include="Tools\point\sqlite\ParseStringParam3.cpp" />
+    <ClCompile Include="Tools\point\sqlite\SqliteAcess.cpp" />
+    <ClCompile Include="Tools\ProcessView.cpp" />
+    <ClCompile Include="Tools\TcpClient.cpp" />
+    <ClCompile Include="Tools\UtilString.cpp" />
+    <ClCompile Include="Tools\zip\unzip.cpp" />
+    <ClCompile Include="Tools\zip\zip.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BEOPDTUEngine.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

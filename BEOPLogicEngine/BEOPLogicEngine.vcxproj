@@ -1,0 +1,875 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ED667548-96FA-4C79-BB93-2E788BE4B855}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BEOPGatewayCore</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\obj\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>BEOP_RUNTEST;WIN32;_DEBUG;_CONSOLE;BCCWIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include;$(SolutionDir);$(SolutionDir)\bacnet\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Toolsd.lib;libmysql.lib;sqlite3.lib;ws2_32.lib;iphlpapi.lib;libnodave.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\bin\$(Configuration);$(SolutionDir)lib</AdditionalLibraryDirectories>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;BCCWIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include;$(SolutionDir);$(SolutionDir)\bacnet\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libmysql.lib;Tools.lib;sqlite3.lib;ws2_32.lib;iphlpapi.lib;libnodave.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\bin\$(Configuration);$(SolutionDir)lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\bacnet\src\mso.ccpp">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\DB_BasicIO\ReadMe.txt" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\bacnet\include\abort.h" />
+    <ClInclude Include="..\bacnet\include\address.h" />
+    <ClInclude Include="..\bacnet\include\ai.h" />
+    <ClInclude Include="..\bacnet\include\alarm_ack.h" />
+    <ClInclude Include="..\bacnet\include\ao.h" />
+    <ClInclude Include="..\bacnet\include\apdu.h" />
+    <ClInclude Include="..\bacnet\include\arcnet.h" />
+    <ClInclude Include="..\bacnet\include\arf.h" />
+    <ClInclude Include="..\bacnet\include\av.h" />
+    <ClInclude Include="..\bacnet\include\awf.h" />
+    <ClInclude Include="..\bacnet\include\bacaddr.h" />
+    <ClInclude Include="..\bacnet\include\bacapp.h" />
+    <ClInclude Include="..\bacnet\include\bacdcode.h" />
+    <ClInclude Include="..\bacnet\include\bacdef.h" />
+    <ClInclude Include="..\bacnet\include\bacdevobjpropref.h" />
+    <ClInclude Include="..\bacnet\include\bacenum.h" />
+    <ClInclude Include="..\bacnet\include\bacerror.h" />
+    <ClInclude Include="..\bacnet\include\bacfile.h" />
+    <ClInclude Include="..\bacnet\include\bacint.h" />
+    <ClInclude Include="..\bacnet\include\bacnet.h" />
+    <ClInclude Include="..\bacnet\include\bacprop.h" />
+    <ClInclude Include="..\bacnet\include\bacpropstates.h" />
+    <ClInclude Include="..\bacnet\include\bacreal.h" />
+    <ClInclude Include="..\bacnet\include\bacstr.h" />
+    <ClInclude Include="..\bacnet\include\bactext.h" />
+    <ClInclude Include="..\bacnet\include\bi.h" />
+    <ClInclude Include="..\bacnet\include\bigend.h" />
+    <ClInclude Include="..\bacnet\include\bip.h" />
+    <ClInclude Include="..\bacnet\include\bits.h" />
+    <ClInclude Include="..\bacnet\include\bo.h" />
+    <ClInclude Include="..\bacnet\include\bv.h" />
+    <ClInclude Include="..\bacnet\include\bvlc.h" />
+    <ClInclude Include="..\bacnet\include\bytes.h" />
+    <ClInclude Include="..\bacnet\include\client.h" />
+    <ClInclude Include="..\bacnet\include\config.h" />
+    <ClInclude Include="..\bacnet\include\cov.h" />
+    <ClInclude Include="..\bacnet\include\crc.h" />
+    <ClInclude Include="..\bacnet\include\datalink.h" />
+    <ClInclude Include="..\bacnet\include\datetime.h" />
+    <ClInclude Include="..\bacnet\include\dcc.h" />
+    <ClInclude Include="..\bacnet\include\debug.h" />
+    <ClInclude Include="..\bacnet\include\device.h" />
+    <ClInclude Include="..\bacnet\include\dlenv.h" />
+    <ClInclude Include="..\bacnet\include\dlmstp.h" />
+    <ClInclude Include="..\bacnet\include\ethernet.h" />
+    <ClInclude Include="..\bacnet\include\event.h" />
+    <ClInclude Include="..\bacnet\include\fifo.h" />
+    <ClInclude Include="..\bacnet\include\filename.h" />
+    <ClInclude Include="..\bacnet\include\getevent.h" />
+    <ClInclude Include="..\bacnet\include\handlers.h" />
+    <ClInclude Include="..\bacnet\include\iam.h" />
+    <ClInclude Include="..\bacnet\include\ihave.h" />
+    <ClInclude Include="..\bacnet\include\indtext.h" />
+    <ClInclude Include="..\bacnet\include\key.h" />
+    <ClInclude Include="..\bacnet\include\keylist.h" />
+    <ClInclude Include="..\bacnet\include\lc.h" />
+    <ClInclude Include="..\bacnet\include\lo.h" />
+    <ClInclude Include="..\bacnet\include\lso.h" />
+    <ClInclude Include="..\bacnet\include\lsp.h" />
+    <ClInclude Include="..\bacnet\include\memcopy.h" />
+    <ClInclude Include="..\bacnet\include\ms-input.h" />
+    <ClInclude Include="..\bacnet\include\mso.h" />
+    <ClInclude Include="..\bacnet\include\mstp.h" />
+    <ClInclude Include="..\bacnet\include\mstpdef.h" />
+    <ClInclude Include="..\bacnet\include\mstptext.h" />
+    <ClInclude Include="..\bacnet\include\mydata.h" />
+    <ClInclude Include="..\bacnet\include\net.h" />
+    <ClInclude Include="..\bacnet\include\npdu.h" />
+    <ClInclude Include="..\bacnet\include\objects.h" />
+    <ClInclude Include="..\bacnet\include\ptransfer.h" />
+    <ClInclude Include="..\bacnet\include\rd.h" />
+    <ClInclude Include="..\bacnet\include\readrange.h" />
+    <ClInclude Include="..\bacnet\include\reject.h" />
+    <ClInclude Include="..\bacnet\include\ringbuf.h" />
+    <ClInclude Include="..\bacnet\include\rp.h" />
+    <ClInclude Include="..\bacnet\include\rpm.h" />
+    <ClInclude Include="..\bacnet\include\rs485.h" />
+    <ClInclude Include="..\bacnet\include\sbuf.h" />
+    <ClInclude Include="..\bacnet\include\stdbool.h" />
+    <ClInclude Include="..\bacnet\include\stdint.h" />
+    <ClInclude Include="..\bacnet\include\timer.h" />
+    <ClInclude Include="..\bacnet\include\timestamp.h" />
+    <ClInclude Include="..\bacnet\include\timesync.h" />
+    <ClInclude Include="..\bacnet\include\trendlog.h" />
+    <ClInclude Include="..\bacnet\include\tsm.h" />
+    <ClInclude Include="..\bacnet\include\txbuf.h" />
+    <ClInclude Include="..\bacnet\include\version.h" />
+    <ClInclude Include="..\bacnet\include\whohas.h" />
+    <ClInclude Include="..\bacnet\include\whois.h" />
+    <ClInclude Include="..\bacnet\include\wp.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\BEOPDataEngineCore.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\BEOPLogicManager.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\DataBaseSetting.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\DLLObject.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\EngineRegister.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\LogicBase.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\LogicDllThread.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\LogicParameter.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\LogicParameterConst.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\LogicParameterLink.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\LogicParameterPoint.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\LogicPipeline.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\RedundencyManager.h" />
+    <ClInclude Include="..\BEOPDataEngineCore\ScheduleThread.h" />
+    <ClInclude Include="..\BEOPDataLink\BacnetLink.h" />
+    <ClInclude Include="..\BEOPDataLink\BacnetServerEngine.h" />
+    <ClInclude Include="..\BEOPDataLink\BEOPDataLinkManager.h" />
+    <ClInclude Include="..\BEOPDataLink\BEOPDataLinkManager_Redundancy.h" />
+    <ClInclude Include="..\BEOPDataLink\CO3PLink.h" />
+    <ClInclude Include="..\BEOPDataLink\DataEngineMode.h" />
+    <ClInclude Include="..\BEOPDataLink\DiagnoseLink.h" />
+    <ClInclude Include="..\BEOPDataLink\FCBusLink.h" />
+    <ClInclude Include="..\BEOPDataLink\MemoryLink.h" />
+    <ClInclude Include="..\BEOPDataLink\ModbusLink.h" />
+    <ClInclude Include="..\BEOPDataLink\MysqlLink.h" />
+    <ClInclude Include="..\BEOPDataLink\OPCLink.h" />
+    <ClInclude Include="..\BEOPDataLink\Protocol104Link.h" />
+    <ClInclude Include="..\BEOPDataLink\SiemensLink.h" />
+    <ClInclude Include="..\BEOPDataLink\SqliteLink.h" />
+    <ClInclude Include="..\BEOPDataLink\SqlServerLink.h" />
+    <ClInclude Include="..\BEOPDataLink\WebLink.h" />
+    <ClInclude Include="..\BEOPDataPoint\DataPointEntry.h" />
+    <ClInclude Include="..\BEOPDataPoint\DataPointManager.h" />
+    <ClInclude Include="..\BEOPDataPoint\sqlite\ParseStringParam3.h" />
+    <ClInclude Include="..\BEOPDataPoint\sqlite\sqlite3.h" />
+    <ClInclude Include="..\BEOPDataPoint\sqlite\sqlite3ext.h" />
+    <ClInclude Include="..\BEOPDataPoint\sqlite\SqliteAcess.h" />
+    <ClInclude Include="..\BEOPDataPoint\sqlite\SqliteRW.h" />
+    <ClInclude Include="..\COMdll\bacnet\BacnetComm.h" />
+    <ClInclude Include="..\COMdll\bacnet\BacnetServerComm.h" />
+    <ClInclude Include="..\COMdll\ComInterface.h" />
+    <ClInclude Include="..\COMdll\COM\COMCtrl.h" />
+    <ClInclude Include="..\COMdll\COM\Modbus.h" />
+    <ClInclude Include="..\COMdll\COM\SerialPort.h" />
+    <ClInclude Include="..\COMdll\DebugLog.h" />
+    <ClInclude Include="..\COMdll\MobusRtu\ModbusRTUCtrl.h" />
+    <ClInclude Include="..\COMdll\MobusRtu\ModbusRTU.h" />
+    <ClInclude Include="..\COMdll\MobusRtu\SerialPortCtrl.h" />
+    <ClInclude Include="..\COMdll\ModbusTcp\CKECO3PTcpCtrl.h" />
+    <ClInclude Include="..\COMdll\ModbusTcp\DogTcpCtrl.h" />
+    <ClInclude Include="..\COMdll\ModbusTcp\FCBusTcpCtrl.h" />
+    <ClInclude Include="..\COMdll\ModbusTcp\ModbusTcpCtrl.h" />
+    <ClInclude Include="..\COMdll\ModbusTcp\Protocol104.h" />
+    <ClInclude Include="..\COMdll\ModbusTcp\TcpClient.h" />
+    <ClInclude Include="..\COMdll\ModbusTcp\TCPDataSender.h" />
+    <ClInclude Include="..\COMdll\ModbusTcp\TcpIpComm.h" />
+    <ClInclude Include="..\COMdll\MysqlCtrl.h" />
+    <ClInclude Include="..\COMdll\ProcessView.h" />
+    <ClInclude Include="..\COMdll\Protocol104\Master104Ctrl.h" />
+    <ClInclude Include="..\COMdll\Protocol104\TCPSocket.h" />
+    <ClInclude Include="..\COMdll\S7UDPCtrl.h" />
+    <ClInclude Include="..\COMdll\SqliteCtrl.h" />
+    <ClInclude Include="..\COMdll\SqlServerCtrl.h" />
+    <ClInclude Include="..\COMdll\WebAPI\WebHttpCtrl.h" />
+    <ClInclude Include="..\DataEngineConfig\CDataEngineAppConfig.h" />
+    <ClInclude Include="..\DB_BasicIO\BEOPDataBaseInfo.h" />
+    <ClInclude Include="..\DB_BasicIO\DatabaseSession.h" />
+    <ClInclude Include="..\DB_BasicIO\DBAccessContainer.h" />
+    <ClInclude Include="..\DB_BasicIO\DBInterfaceExp.h" />
+    <ClInclude Include="..\DB_BasicIO\DBInterfaceImp.h" />
+    <ClInclude Include="..\DB_BasicIO\DllDefine.h" />
+    <ClInclude Include="..\DB_BasicIO\ExportDataAccess.h" />
+    <ClInclude Include="..\DB_BasicIO\MysqlDeleter.h" />
+    <ClInclude Include="..\DB_BasicIO\RealTimeDataAccess.h" />
+    <ClInclude Include="..\DB_BasicIO\RunningRecordOperation.h" />
+    <ClInclude Include="..\DB_BasicIO\TableAnalyzer.h" />
+    <ClInclude Include="..\DB_BasicIO\WarningConfigItem.h" />
+    <ClInclude Include="..\DB_BasicIO\WarningEntry.h" />
+    <ClInclude Include="..\DTUDataUpload\DatabaseDataFetcher.h" />
+    <ClInclude Include="..\DTUDataUpload\DTUSender.h" />
+    <ClInclude Include="..\DTUDataUpload\PackageTypeDefine.h" />
+    <ClInclude Include="..\LAN_WANComm\DatasHandle.h" />
+    <ClInclude Include="..\LAN_WANComm\Definition.h" />
+    <ClInclude Include="..\LAN_WANComm\IocpClient.h" />
+    <ClInclude Include="..\LAN_WANComm\NetworkComm.h" />
+    <ClInclude Include="..\LAN_WANComm\Tools\IocpComm\IocpBuffer.h" />
+    <ClInclude Include="..\LAN_WANComm\Tools\IocpComm\Iocps.h" />
+    <ClInclude Include="..\LAN_WANComm\Tools\IocpComm\MyClientIocp.h" />
+    <ClInclude Include="..\LAN_WANComm\Tools\NetComm\NetComm.h" />
+    <ClInclude Include="..\LAN_WANComm\Tools\NetComm\NetCommBase.h" />
+    <ClInclude Include="..\LAN_WANComm\Tools\ToolsFunction\PingIcmp.h" />
+    <ClInclude Include="..\LAN_WANComm\Tools\ToolsFunction\PopWindowDlg.h" />
+    <ClInclude Include="..\LAN_WANComm\Tools\ToolsFunction\ToolsFunction.h" />
+    <ClInclude Include="..\LAN_WANComm\UpperMachineComm.h" />
+    <ClInclude Include="..\OPCdll\BottCode\advisesink.h" />
+    <ClInclude Include="..\OPCdll\BottCode\datasink20.h" />
+    <ClInclude Include="..\OPCdll\BottCode\globals.h" />
+    <ClInclude Include="..\OPCdll\BottCode\group.h" />
+    <ClInclude Include="..\OPCdll\BottCode\item.h" />
+    <ClInclude Include="..\OPCdll\BottCode\opccomn.h" />
+    <ClInclude Include="..\OPCdll\BottCode\opcda.h" />
+    <ClInclude Include="..\OPCdll\BottCode\opcerrors.h" />
+    <ClInclude Include="..\OPCdll\BottCode\opcprops.h" />
+    <ClInclude Include="..\OPCdll\BottCode\opcquality.h" />
+    <ClInclude Include="..\OPCdll\BottCode\safearray.h" />
+    <ClInclude Include="..\OPCdll\BottCode\safelock.h" />
+    <ClInclude Include="..\OPCdll\BottCode\server.h" />
+    <ClInclude Include="..\OPCdll\BottCode\shutdownsink.h" />
+    <ClInclude Include="..\OPCdll\OPCCtrl.h" />
+    <ClInclude Include="..\OPCdll\OPCdefine.h" />
+    <ClInclude Include="..\OPCdll\OPC_Connection.h" />
+    <ClInclude Include="..\OPCdll\Resource.h" />
+    <ClInclude Include="..\ServerDataAccess\BEOPDataAccess.h" />
+    <ClInclude Include="..\ServerDataAccess\BEOPDataAccessBase.h" />
+    <ClInclude Include="..\Tools\CustomTools\CustomTools.h" />
+    <ClInclude Include="..\Tools\DllDefine.h" />
+    <ClInclude Include="..\Tools\EngineInfoDefine.h" />
+    <ClInclude Include="..\Tools\ErrorCodeDefine.h" />
+    <ClInclude Include="..\Tools\Maths\MathCalcs.h" />
+    <ClInclude Include="..\Tools\Maths\MathDefines.h" />
+    <ClInclude Include="..\Tools\NormalDefines.h" />
+    <ClInclude Include="..\Tools\Operation_Define.h" />
+    <ClInclude Include="..\Tools\Scope_Ptr.h" />
+    <ClInclude Include="..\Tools\StringDef.h" />
+    <ClInclude Include="..\Tools\StructDefine.h" />
+    <ClInclude Include="..\Tools\USingletonTemplate.h" />
+    <ClInclude Include="..\Tools\Util\UtilsFile.h" />
+    <ClInclude Include="..\Tools\Util\UtilString.h" />
+    <ClInclude Include="..\Tools\Zip\unzip.h" />
+    <ClInclude Include="..\Tools\Zip\zip.h" />
+    <ClInclude Include="BEOPGatewayCore.h" />
+    <ClInclude Include="BeopGatewayCoreWrapper.h" />
+    <ClInclude Include="CoreFileTransfer.h" />
+    <ClInclude Include="CoreUnitTest.h" />
+    <ClInclude Include="DumpFile.h" />
+    <ClInclude Include="ErrCodeLog.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\bacnet\src\abort.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\address.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\ai.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\ao.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\apdu.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\arf.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\av.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\awf.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacaddr.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacapp.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacdcode.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacdevobjpropref.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacerror.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacfile.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacint.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacprop.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacpropstates.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacreal.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacstr.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bactext.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bi.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bigend.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bip-init.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bip.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bo.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bv.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bvlc.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\cov.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\crc.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\datalink.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\datetime.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\dcc.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\debug.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\device.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\dlenv.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\event.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\fifo.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\filename.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_arf.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_arf_a.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_awf.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_cov.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_dcc.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_iam.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_ihave.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_lso.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_npdu.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_rd.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_rp.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_rpm.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_rpm_a.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_rp_a.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_rr.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_ts.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_ucov.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_whohas.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_whois.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_wp.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\iam.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\ihave.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\indtext.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\key.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\keylist.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\lc.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\lo.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\lso.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\lsp.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\memcopy.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\ms-input.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\mstptext.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\noserv.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\npdu.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\objects.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\ptransfer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\rd.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\readrange.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\reject.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\ringbuf.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\rp.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\rpm.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\sbuf.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_arfs.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_awfs.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_cov.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_dcc.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_iam.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_ihave.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_rd.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_router.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_rp.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_rpm.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_ts.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_uevent.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_whohas.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_whois.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_wp.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\timestamp.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\timesync.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\trendlog.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\tsm.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\txbuf.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\version.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\whohas.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\whois.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\wp.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\BEOPDataEngineCore.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\BEOPLogicManager.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\DataBaseSetting.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\DLLObject.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\EngineRegister.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\LogicDllThread.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\LogicParameter.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\LogicParameterConst.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\LogicParameterLink.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\LogicParameterPoint.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\LogicPipeline.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\RedundencyManager.cpp" />
+    <ClCompile Include="..\BEOPDataEngineCore\ScheduleThread.cpp" />
+    <ClCompile Include="..\BEOPDataLink\BacnetLink.cpp" />
+    <ClCompile Include="..\BEOPDataLink\BacnetServerEngine.cpp" />
+    <ClCompile Include="..\BEOPDataLink\BEOPDataLinkManager.cpp" />
+    <ClCompile Include="..\BEOPDataLink\BEOPDataLinkManager_Redundancy.cpp" />
+    <ClCompile Include="..\BEOPDataLink\CO3PLink.cpp" />
+    <ClCompile Include="..\BEOPDataLink\DiagnoseLink.cpp" />
+    <ClCompile Include="..\BEOPDataLink\FCBusLink.cpp" />
+    <ClCompile Include="..\BEOPDataLink\MemoryLink.cpp" />
+    <ClCompile Include="..\BEOPDataLink\ModbusLink.cpp" />
+    <ClCompile Include="..\BEOPDataLink\MysqlLink.cpp" />
+    <ClCompile Include="..\BEOPDataLink\OPCLink.cpp" />
+    <ClCompile Include="..\BEOPDataLink\Protocol104Link.cpp" />
+    <ClCompile Include="..\BEOPDataLink\SiemensLink.cpp" />
+    <ClCompile Include="..\BEOPDataLink\SqliteLink.cpp" />
+    <ClCompile Include="..\BEOPDataLink\SqlServerLink.cpp" />
+    <ClCompile Include="..\BEOPDataLink\WebLink.cpp" />
+    <ClCompile Include="..\BEOPDataPoint\DataPointEntry.cpp" />
+    <ClCompile Include="..\BEOPDataPoint\DataPointManager.cpp" />
+    <ClCompile Include="..\BEOPDataPoint\sqlite\ParseStringParam3.cpp" />
+    <ClCompile Include="..\BEOPDataPoint\sqlite\SqliteAcess.cpp" />
+    <ClCompile Include="..\BEOPDataPoint\sqlite\SqliteRW.cpp" />
+    <ClCompile Include="..\COMdll\bacnet\BacnetComm.cpp" />
+    <ClCompile Include="..\COMdll\bacnet\BacnetServerComm.cpp" />
+    <ClCompile Include="..\COMdll\ComInterface.cpp" />
+    <ClCompile Include="..\COMdll\COM\COMCtrl.cpp" />
+    <ClCompile Include="..\COMdll\COM\Modbus.cpp" />
+    <ClCompile Include="..\COMdll\COM\SerialPort.cpp" />
+    <ClCompile Include="..\COMdll\DebugLog.cpp" />
+    <ClCompile Include="..\COMdll\MobusRtu\ModbusRTUCtrl.cpp" />
+    <ClCompile Include="..\COMdll\MobusRtu\ModbusRTU.cpp" />
+    <ClCompile Include="..\COMdll\MobusRtu\SerialPortCtrl.cpp" />
+    <ClCompile Include="..\COMdll\ModbusTcp\CKECO3PTcpCtrl.cpp" />
+    <ClCompile Include="..\COMdll\ModbusTcp\DogTcpCtrl.cpp" />
+    <ClCompile Include="..\COMdll\ModbusTcp\FCBusTcpCtrl.cpp" />
+    <ClCompile Include="..\COMdll\ModbusTcp\ModbusTcpCtrl.cpp" />
+    <ClCompile Include="..\COMdll\ModbusTcp\Protocol104.cpp" />
+    <ClCompile Include="..\COMdll\ModbusTcp\TcpClient.cpp" />
+    <ClCompile Include="..\COMdll\ModbusTcp\TCPDataSender.cpp" />
+    <ClCompile Include="..\COMdll\ModbusTcp\TcpIpComm.cpp" />
+    <ClCompile Include="..\COMdll\MysqlCtrl.cpp" />
+    <ClCompile Include="..\COMdll\ProcessView.cpp" />
+    <ClCompile Include="..\COMdll\Protocol104\Master104Ctrl.cpp" />
+    <ClCompile Include="..\COMdll\Protocol104\TCPSocket.cpp" />
+    <ClCompile Include="..\COMdll\S7UDPCtrl.cpp" />
+    <ClCompile Include="..\COMdll\SqliteCtrl.cpp" />
+    <ClCompile Include="..\COMdll\SqlServerCtrl.cpp" />
+    <ClCompile Include="..\COMdll\WebAPI\WebHttpCtrl.cpp" />
+    <ClCompile Include="..\DataEngineConfig\CDataEngineAppConfig.cpp" />
+    <ClCompile Include="..\DB_BasicIO\DatabaseSession.cpp" />
+    <ClCompile Include="..\DB_BasicIO\DBAccessContainer.cpp" />
+    <ClCompile Include="..\DB_BasicIO\ExportDataAccess.cpp" />
+    <ClCompile Include="..\DB_BasicIO\RealTimeDataAccess.cpp" />
+    <ClCompile Include="..\DB_BasicIO\RunningRecordOperation.cpp" />
+    <ClCompile Include="..\DB_BasicIO\TableAnalyzer.cpp" />
+    <ClCompile Include="..\DB_BasicIO\WarningConfigItem.cpp" />
+    <ClCompile Include="..\DB_BasicIO\WarningEntry.cpp" />
+    <ClCompile Include="..\DTUDataUpload\DatabaseDataFetcher.cpp" />
+    <ClCompile Include="..\DTUDataUpload\DTUSender.cpp" />
+    <ClCompile Include="..\DTUDataUpload\PackageTypeDefine.cpp" />
+    <ClCompile Include="..\LAN_WANComm\DatasHandle.cpp" />
+    <ClCompile Include="..\LAN_WANComm\IocpClient.cpp" />
+    <ClCompile Include="..\LAN_WANComm\NetworkComm.cpp" />
+    <ClCompile Include="..\LAN_WANComm\Tools\IocpComm\IocpBuffer.cpp" />
+    <ClCompile Include="..\LAN_WANComm\Tools\IocpComm\Iocps.cpp" />
+    <ClCompile Include="..\LAN_WANComm\Tools\IocpComm\MyClientIocp.cpp" />
+    <ClCompile Include="..\LAN_WANComm\Tools\NetComm\NetComm.cpp" />
+    <ClCompile Include="..\LAN_WANComm\Tools\NetComm\NetCommBase.cpp" />
+    <ClCompile Include="..\LAN_WANComm\Tools\ToolsFunction\PingIcmp.cpp" />
+    <ClCompile Include="..\LAN_WANComm\Tools\ToolsFunction\PopWindowDlg.cpp" />
+    <ClCompile Include="..\LAN_WANComm\Tools\ToolsFunction\ToolsFunction.cpp" />
+    <ClCompile Include="..\LAN_WANComm\UpperMachineComm.cpp" />
+    <ClCompile Include="..\OPCdll\BottCode\advisesink.cpp" />
+    <ClCompile Include="..\OPCdll\BottCode\datasink20.cpp" />
+    <ClCompile Include="..\OPCdll\BottCode\globals.cpp" />
+    <ClCompile Include="..\OPCdll\BottCode\group.cpp" />
+    <ClCompile Include="..\OPCdll\BottCode\item.cpp" />
+    <ClCompile Include="..\OPCdll\BottCode\opccomn_i.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\OPCdll\BottCode\opcda_i.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\OPCdll\BottCode\safearray.cpp" />
+    <ClCompile Include="..\OPCdll\BottCode\server.cpp" />
+    <ClCompile Include="..\OPCdll\BottCode\shutdownsink.cpp" />
+    <ClCompile Include="..\OPCdll\OPCCtrl.cpp" />
+    <ClCompile Include="..\OPCdll\OPC_Connection.cpp" />
+    <ClCompile Include="..\ServerDataAccess\BEOPDataAccess.cpp" />
+    <ClCompile Include="..\Tools\Util\UtilsFile.cpp" />
+    <ClCompile Include="..\Tools\Util\UtilString.cpp" />
+    <ClCompile Include="..\Tools\Zip\unzip.cpp" />
+    <ClCompile Include="..\Tools\Zip\zip.cpp" />
+    <ClCompile Include="BEOPGatewayCore.cpp" />
+    <ClCompile Include="BeopGatewayCoreWrapper.cpp" />
+    <ClCompile Include="CoreFileTransfer.cpp" />
+    <ClCompile Include="CoreUnitTest.cpp" />
+    <ClCompile Include="ErrCodeLog.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BEOPGatewayCore.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="BEOPGatewayCore.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

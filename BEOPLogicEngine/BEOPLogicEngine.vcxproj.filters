@@ -1,0 +1,1427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="BEOPDataEngineCore">
+      <UniqueIdentifier>{d7fa5f3a-a1e7-455a-80d3-6332144ac70e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataEngineConfig">
+      <UniqueIdentifier>{40d771a7-1123-48e9-b77e-2c1db254f33f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ServerDataAccess">
+      <UniqueIdentifier>{45c91911-8938-4829-96d0-16b9ac271f01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BEOPDataPoint">
+      <UniqueIdentifier>{043466a8-564e-414b-abe3-7849ceec3de5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{a747d5a3-3c35-4daf-9fd2-04ac8dc9de79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BEOPDataLink">
+      <UniqueIdentifier>{701d6f57-4397-4158-9e45-f0a91a67f840}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="COMdll">
+      <UniqueIdentifier>{c9f0c680-4746-4f94-b4dc-07afac46fb27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="COMdll\COM">
+      <UniqueIdentifier>{0d787ba6-0896-450b-87b7-6cf33ad39427}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="COMdll\ModbusTcp">
+      <UniqueIdentifier>{9fc91c6a-fe4b-420c-b28a-4b4104431bd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="COMdll\MysqlCtrl">
+      <UniqueIdentifier>{2a4829d1-97a5-4095-b678-811a007f77cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="COMdll\Protocol104">
+      <UniqueIdentifier>{18bfba58-895a-419a-a7c5-38df47f73212}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="COMdll\S7UDP">
+      <UniqueIdentifier>{7115f7f9-a6d6-4174-acdf-979eade834e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DTUDataUpload">
+      <UniqueIdentifier>{c62fff0a-58f2-4d5b-ac29-945f60eaa177}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LAN_WANComm">
+      <UniqueIdentifier>{9c13069e-a0ec-4a88-9153-79e9159bfc9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OPCdll">
+      <UniqueIdentifier>{65ebac01-774b-4b32-82c8-92180393d2de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bacnet">
+      <UniqueIdentifier>{d2e9ef37-31a0-4259-99c3-3313bff91cbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bacnet\src">
+      <UniqueIdentifier>{c97712a6-6205-4355-b5de-7be7e8946a84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bacnet\include">
+      <UniqueIdentifier>{e06e4029-b336-49e1-8a44-375f968d238e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="COMdll\TCPDataCtrl">
+      <UniqueIdentifier>{ff8f7606-65b9-46cb-a13e-4e397ed8a4c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataEngineConfig\DB_BasicIO">
+      <UniqueIdentifier>{48297aa0-1a3d-4795-a1c8-6a3a9926b8b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="COMdll\DogCtrl">
+      <UniqueIdentifier>{13ec6f5e-bb18-4487-9dea-c1f6ebcdf82b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="COMdll\ModbusRtu">
+      <UniqueIdentifier>{37668f34-b67e-4995-a3f5-0399f809cc4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="COMdll\WebAPI">
+      <UniqueIdentifier>{4196f495-7f94-4542-adca-c03bf46d354f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="..\DB_BasicIO\ReadMe.txt">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </None>
+    <None Include="..\bacnet\src\mso.ccpp">
+      <Filter>Bacnet\src</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BEOPGatewayCore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreFileTransfer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\BEOPLogicManager.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\DataBaseSetting.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\DLLObject.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\EngineRegister.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\LogicBase.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\LogicDllThread.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\LogicParameter.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\LogicParameterConst.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\LogicParameterLink.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\LogicParameterPoint.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\LogicPipeline.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\RedundencyManager.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\BEOPDataEngineCore.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DataEngineConfig\CDataEngineAppConfig.h">
+      <Filter>DataEngineConfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\ExportDataAccess.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\WarningEntry.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\RealTimeDataAccess.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\TableAnalyzer.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\WarningConfigItem.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\BEOPDataBaseInfo.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\DatabaseSession.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\DBAccessContainer.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\DBInterfaceExp.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\DBInterfaceImp.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\DllDefine.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\MysqlDeleter.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DB_BasicIO\RunningRecordOperation.h">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerDataAccess\BEOPDataAccessBase.h">
+      <Filter>ServerDataAccess</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerDataAccess\BEOPDataAccess.h">
+      <Filter>ServerDataAccess</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataPoint\sqlite\SqliteRW.h">
+      <Filter>BEOPDataPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataPoint\DataPointEntry.h">
+      <Filter>BEOPDataPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataPoint\DataPointManager.h">
+      <Filter>BEOPDataPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataPoint\sqlite\ParseStringParam3.h">
+      <Filter>BEOPDataPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataPoint\sqlite\sqlite3.h">
+      <Filter>BEOPDataPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataPoint\sqlite\sqlite3ext.h">
+      <Filter>BEOPDataPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataPoint\sqlite\SqliteAcess.h">
+      <Filter>BEOPDataPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\Util\UtilString.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\CustomTools\CustomTools.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\DllDefine.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\Maths\MathCalcs.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\Maths\MathDefines.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\NormalDefines.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\Operation_Define.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\Scope_Ptr.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\StringDef.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\USingletonTemplate.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\Util\UtilsFile.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataLink\BacnetServerEngine.h">
+      <Filter>BEOPDataLink</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataLink\BEOPDataLinkManager.h">
+      <Filter>BEOPDataLink</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataLink\BEOPDataLinkManager_Redundancy.h">
+      <Filter>BEOPDataLink</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataLink\DataEngineMode.h">
+      <Filter>BEOPDataLink</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataLink\MemoryLink.h">
+      <Filter>BEOPDataLink</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataLink\ModbusLink.h">
+      <Filter>BEOPDataLink</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataLink\MysqlLink.h">
+      <Filter>BEOPDataLink</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataLink\OPCLink.h">
+      <Filter>BEOPDataLink</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataLink\Protocol104Link.h">
+      <Filter>BEOPDataLink</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataLink\SiemensLink.h">
+      <Filter>BEOPDataLink</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\COM\SerialPort.h">
+      <Filter>COMdll\COM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\COM\COMCtrl.h">
+      <Filter>COMdll\COM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\COM\Modbus.h">
+      <Filter>COMdll\COM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\ModbusTcp\TcpIpComm.h">
+      <Filter>COMdll\ModbusTcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\ModbusTcp\ModbusTcpCtrl.h">
+      <Filter>COMdll\ModbusTcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\MysqlCtrl.h">
+      <Filter>COMdll\MysqlCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\Protocol104\Master104Ctrl.h">
+      <Filter>COMdll\Protocol104</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\Protocol104\TCPSocket.h">
+      <Filter>COMdll\Protocol104</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\S7UDPCtrl.h">
+      <Filter>COMdll\S7UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\bacnet\BacnetComm.h">
+      <Filter>COMdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\bacnet\BacnetServerComm.h">
+      <Filter>COMdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\ComInterface.h">
+      <Filter>COMdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DTUDataUpload\DTUSender.h">
+      <Filter>DTUDataUpload</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DTUDataUpload\DatabaseDataFetcher.h">
+      <Filter>DTUDataUpload</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DTUDataUpload\PackageTypeDefine.h">
+      <Filter>DTUDataUpload</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\DatasHandle.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\UpperMachineComm.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\Definition.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\Tools\IocpComm\IocpBuffer.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\IocpClient.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\Tools\IocpComm\Iocps.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\Tools\IocpComm\MyClientIocp.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\Tools\NetComm\NetComm.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\Tools\NetComm\NetCommBase.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\NetworkComm.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\Tools\ToolsFunction\PingIcmp.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\Tools\ToolsFunction\PopWindowDlg.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LAN_WANComm\Tools\ToolsFunction\ToolsFunction.h">
+      <Filter>LAN_WANComm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OPCdll\BottCode\advisesink.h">
+      <Filter>OPCdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OPCdll\BottCode\shutdownsink.h">
+      <Filter>OPCdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OPCdll\BottCode\datasink20.h">
+      <Filter>OPCdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OPCdll\BottCode\globals.h">
+      <Filter>OPCdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OPCdll\BottCode\group.h">
+      <Filter>OPCdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OPCdll\BottCode\item.h">
+      <Filter>OPCdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OPCdll\OPC_Connection.h">
+      <Filter>OPCdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OPCdll\BottCode\opccomn.h">
+      <Filter>OPCdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OPCdll\OPCCtrl.h">
+      <Filter>OPCdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OPCdll\BottCode\opcda.h">
+      <Filter>OPCdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OPCdll\OPCdefine.h">
+      <Filter>OPCdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OPCdll\BottCode\opcerrors.h">
+      <Filter>OPCdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OPCdll\BottCode\opcprops.h">
+      <Filter>OPCdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OPCdll\BottCode\opcquality.h">
+      <Filter>OPCdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OPCdll\Resource.h">
+      <Filter>OPCdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OPCdll\BottCode\safearray.h">
+      <Filter>OPCdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OPCdll\BottCode\safelock.h">
+      <Filter>OPCdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OPCdll\BottCode\server.h">
+      <Filter>OPCdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\abort.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bytes.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\address.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\ai.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\alarm_ack.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\ao.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\apdu.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\arcnet.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\arf.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\av.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\awf.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bacaddr.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bacapp.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bacdcode.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bacdef.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bacdevobjpropref.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bacenum.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bacerror.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bacfile.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bacint.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bacnet.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bacprop.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bacpropstates.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bacreal.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bacstr.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bactext.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bi.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bigend.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bip.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bits.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bo.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bv.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\bvlc.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\client.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\datetime.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\config.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\cov.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\crc.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\datalink.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\dcc.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\ethernet.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\debug.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\dlenv.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\dlmstp.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\event.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\fifo.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\handlers.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\filename.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\getevent.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\iam.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\ihave.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\indtext.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\key.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\keylist.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\lc.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\lo.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\lso.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\lsp.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\memcopy.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\ms-input.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\mso.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\mstpdef.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\mstptext.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\mydata.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\net.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\npdu.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\objects.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\ptransfer.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\rd.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\readrange.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\reject.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\ringbuf.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\rp.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\rpm.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\rs485.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\sbuf.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\wp.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\stdbool.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\stdint.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\timer.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\timestamp.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\timesync.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\trendlog.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\tsm.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\txbuf.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\version.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\whohas.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\whois.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\device.h">
+      <Filter>Bacnet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bacnet\include\mstp.h">
+      <Filter>Bacnet\include</Filter>
+    </ClInclude>
+    <ClInclude Include="BeopGatewayCoreWrapper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreUnitTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\ModbusTcp\TCPDataSender.h">
+      <Filter>COMdll\TCPDataCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\ModbusTcp\FCBusTcpCtrl.h">
+      <Filter>COMdll\ModbusTcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataLink\FCBusLink.h">
+      <Filter>BEOPDataLink</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataLink\BacnetLink.h">
+      <Filter>Bacnet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\Zip\unzip.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\Zip\zip.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\ModbusTcp\TcpClient.h">
+      <Filter>COMdll\TCPDataCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\EngineInfoDefine.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\DebugLog.h">
+      <Filter>COMdll</Filter>
+    </ClInclude>
+    <ClInclude Include="DumpFile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\ProcessView.h">
+      <Filter>COMdll</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrCodeLog.h">
+      <Filter>COMdll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\ModbusTcp\Protocol104.h">
+      <Filter>COMdll\Protocol104</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\ErrorCodeDefine.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\ModbusTcp\DogTcpCtrl.h">
+      <Filter>COMdll\DogCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\MobusRtu\ModbusRTUCtrl.h">
+      <Filter>COMdll\ModbusRtu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\MobusRtu\ModbusRTU.h">
+      <Filter>COMdll\ModbusRtu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\MobusRtu\SerialPortCtrl.h">
+      <Filter>COMdll\ModbusRtu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\StructDefine.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\SqliteCtrl.h">
+      <Filter>COMdll\MysqlCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataLink\SqliteLink.h">
+      <Filter>BEOPDataLink</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataLink\CO3PLink.h">
+      <Filter>BEOPDataLink</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\ModbusTcp\CKECO3PTcpCtrl.h">
+      <Filter>COMdll\ModbusTcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataLink\SqlServerLink.h">
+      <Filter>BEOPDataLink</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\SqlServerCtrl.h">
+      <Filter>COMdll\MysqlCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataEngineCore\ScheduleThread.h">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMdll\WebAPI\WebHttpCtrl.h">
+      <Filter>COMdll\WebAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataLink\WebLink.h">
+      <Filter>BEOPDataLink</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BEOPDataLink\DiagnoseLink.h">
+      <Filter>BEOPDataLink</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BEOPGatewayCore.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreFileTransfer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\BEOPLogicManager.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\DataBaseSetting.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\DLLObject.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\EngineRegister.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\LogicDllThread.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\LogicParameter.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\LogicParameterConst.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\LogicParameterLink.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\LogicParameterPoint.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\LogicPipeline.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\RedundencyManager.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\BEOPDataEngineCore.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DataEngineConfig\CDataEngineAppConfig.cpp">
+      <Filter>DataEngineConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DB_BasicIO\DatabaseSession.cpp">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DB_BasicIO\DBAccessContainer.cpp">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DB_BasicIO\RunningRecordOperation.cpp">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DB_BasicIO\RealTimeDataAccess.cpp">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DB_BasicIO\TableAnalyzer.cpp">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DB_BasicIO\WarningConfigItem.cpp">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DB_BasicIO\WarningEntry.cpp">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DB_BasicIO\ExportDataAccess.cpp">
+      <Filter>DataEngineConfig\DB_BasicIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerDataAccess\BEOPDataAccess.cpp">
+      <Filter>ServerDataAccess</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataPoint\DataPointEntry.cpp">
+      <Filter>BEOPDataPoint</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataPoint\DataPointManager.cpp">
+      <Filter>BEOPDataPoint</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataPoint\sqlite\ParseStringParam3.cpp">
+      <Filter>BEOPDataPoint</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataPoint\sqlite\SqliteAcess.cpp">
+      <Filter>BEOPDataPoint</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataPoint\sqlite\SqliteRW.cpp">
+      <Filter>BEOPDataPoint</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tools\Util\UtilString.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tools\Util\UtilsFile.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataLink\BacnetLink.cpp">
+      <Filter>BEOPDataLink</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataLink\SiemensLink.cpp">
+      <Filter>BEOPDataLink</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataLink\BacnetServerEngine.cpp">
+      <Filter>BEOPDataLink</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataLink\BEOPDataLinkManager.cpp">
+      <Filter>BEOPDataLink</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataLink\BEOPDataLinkManager_Redundancy.cpp">
+      <Filter>BEOPDataLink</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataLink\MemoryLink.cpp">
+      <Filter>BEOPDataLink</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataLink\ModbusLink.cpp">
+      <Filter>BEOPDataLink</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataLink\MysqlLink.cpp">
+      <Filter>BEOPDataLink</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataLink\OPCLink.cpp">
+      <Filter>BEOPDataLink</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataLink\Protocol104Link.cpp">
+      <Filter>BEOPDataLink</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\COM\COMCtrl.cpp">
+      <Filter>COMdll\COM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\COM\Modbus.cpp">
+      <Filter>COMdll\COM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\COM\SerialPort.cpp">
+      <Filter>COMdll\COM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\ModbusTcp\ModbusTcpCtrl.cpp">
+      <Filter>COMdll\ModbusTcp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\ModbusTcp\TcpIpComm.cpp">
+      <Filter>COMdll\ModbusTcp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\MysqlCtrl.cpp">
+      <Filter>COMdll\MysqlCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\Protocol104\Master104Ctrl.cpp">
+      <Filter>COMdll\Protocol104</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\Protocol104\TCPSocket.cpp">
+      <Filter>COMdll\Protocol104</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\S7UDPCtrl.cpp">
+      <Filter>COMdll\S7UDP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\bacnet\BacnetComm.cpp">
+      <Filter>COMdll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\bacnet\BacnetServerComm.cpp">
+      <Filter>COMdll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\ComInterface.cpp">
+      <Filter>COMdll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DTUDataUpload\DatabaseDataFetcher.cpp">
+      <Filter>DTUDataUpload</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DTUDataUpload\DTUSender.cpp">
+      <Filter>DTUDataUpload</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DTUDataUpload\PackageTypeDefine.cpp">
+      <Filter>DTUDataUpload</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\DatasHandle.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\UpperMachineComm.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\Tools\IocpComm\IocpBuffer.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\IocpClient.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\Tools\IocpComm\Iocps.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\Tools\IocpComm\MyClientIocp.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\Tools\NetComm\NetComm.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\Tools\NetComm\NetCommBase.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\NetworkComm.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\Tools\ToolsFunction\PingIcmp.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\Tools\ToolsFunction\PopWindowDlg.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LAN_WANComm\Tools\ToolsFunction\ToolsFunction.cpp">
+      <Filter>LAN_WANComm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OPCdll\BottCode\advisesink.cpp">
+      <Filter>OPCdll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OPCdll\BottCode\datasink20.cpp">
+      <Filter>OPCdll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OPCdll\BottCode\globals.cpp">
+      <Filter>OPCdll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OPCdll\BottCode\group.cpp">
+      <Filter>OPCdll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OPCdll\BottCode\item.cpp">
+      <Filter>OPCdll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OPCdll\OPC_Connection.cpp">
+      <Filter>OPCdll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OPCdll\BottCode\opccomn_i.c">
+      <Filter>OPCdll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OPCdll\OPCCtrl.cpp">
+      <Filter>OPCdll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OPCdll\BottCode\opcda_i.c">
+      <Filter>OPCdll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OPCdll\BottCode\safearray.cpp">
+      <Filter>OPCdll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OPCdll\BottCode\server.cpp">
+      <Filter>OPCdll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OPCdll\BottCode\shutdownsink.cpp">
+      <Filter>OPCdll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\abort.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\address.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\ai.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\ao.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\arf.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\awf.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacaddr.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacapp.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacdcode.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacdevobjpropref.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacstr.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacreal.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacpropstates.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacprop.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacint.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacfile.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bacerror.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bo.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bip.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bip-init.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bigend.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bactext.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bv.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bvlc.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\crc.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\datalink.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\datetime.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\debug.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\dlenv.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\event.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\filename.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_arf.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_ihave.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_iam.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_dcc.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_cov.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_awf.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_arf_a.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_lso.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_npdu.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_rd.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_rp.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_rp_a.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_rpm.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_rpm_a.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_rr.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_ts.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_ucov.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_whohas.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_whois.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\h_wp.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\dcc.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\sbuf.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\fifo.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\iam.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\ihave.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\indtext.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\key.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\keylist.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\lc.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\lo.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\lso.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\lsp.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\memcopy.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\ms-input.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\mstptext.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\noserv.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\npdu.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\objects.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\ptransfer.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\rd.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\readrange.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\reject.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\ringbuf.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\rp.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\rpm.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_arfs.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_awfs.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_cov.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_dcc.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_iam.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_ihave.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_rd.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_router.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_rp.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_rpm.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_ts.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_uevent.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_whohas.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_whois.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\s_wp.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\timestamp.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\timesync.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\trendlog.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\tsm.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\txbuf.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\version.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\whohas.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\whois.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\wp.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\av.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\apdu.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\bi.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\cov.cpp">
+      <Filter>Bacnet\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bacnet\src\device.cpp">
+      <Filter>Bacnet</Filter>
+    </ClCompile>
+    <ClCompile Include="BeopGatewayCoreWrapper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreUnitTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\ModbusTcp\TCPDataSender.cpp">
+      <Filter>COMdll\TCPDataCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\ModbusTcp\FCBusTcpCtrl.cpp">
+      <Filter>COMdll\ModbusTcp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataLink\FCBusLink.cpp">
+      <Filter>BEOPDataLink</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tools\Zip\unzip.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Tools\Zip\zip.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\ModbusTcp\TcpClient.cpp">
+      <Filter>COMdll\TCPDataCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\DebugLog.cpp">
+      <Filter>COMdll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\ProcessView.cpp">
+      <Filter>COMdll</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrCodeLog.cpp">
+      <Filter>COMdll</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\ModbusTcp\Protocol104.cpp">
+      <Filter>COMdll\Protocol104</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\ModbusTcp\DogTcpCtrl.cpp">
+      <Filter>COMdll\DogCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\MobusRtu\ModbusRTUCtrl.cpp">
+      <Filter>COMdll\ModbusRtu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\MobusRtu\ModbusRTU.cpp">
+      <Filter>COMdll\ModbusRtu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\MobusRtu\SerialPortCtrl.cpp">
+      <Filter>COMdll\ModbusRtu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\SqliteCtrl.cpp">
+      <Filter>COMdll\MysqlCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataLink\SqliteLink.cpp">
+      <Filter>BEOPDataLink</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataLink\CO3PLink.cpp">
+      <Filter>BEOPDataLink</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\ModbusTcp\CKECO3PTcpCtrl.cpp">
+      <Filter>COMdll\ModbusTcp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataLink\SqlServerLink.cpp">
+      <Filter>BEOPDataLink</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\SqlServerCtrl.cpp">
+      <Filter>COMdll\MysqlCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataEngineCore\ScheduleThread.cpp">
+      <Filter>BEOPDataEngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMdll\WebAPI\WebHttpCtrl.cpp">
+      <Filter>COMdll\WebAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataLink\WebLink.cpp">
+      <Filter>BEOPDataLink</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BEOPDataLink\DiagnoseLink.cpp">
+      <Filter>BEOPDataLink</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BEOPGatewayCore.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
